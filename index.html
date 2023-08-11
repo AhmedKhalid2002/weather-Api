@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="./css/all.min.css" />
+    <link rel="stylesheet" href="./css/bootstrap.min.css" />
+    <link rel="stylesheet" href="./css/style.css" />
+    <title>Weather</title>
+</head>
+<body>
+  
+    <nav class="navbar navbar-expand-lg bg-dark navbar-dark  ">
+      <div class="container">
+        <a class="navbar-brand" href="#">
+          <img src="image/logo.png" class="w-100" alt="logo">
+          <div class="logo_weather">
+            <h3 class="fs-6">Weather</h3>
+            <small class="text-secondary ">tagline goes here</small>
+          </div>
+        </a>
+        <button
+          class="navbar-toggler"
+          type="button"
+          data-bs-toggle="collapse"
+          data-bs-target="#navbarSupportedContent"
+          aria-controls="navbarSupportedContent"
+          aria-expanded="false"
+          aria-label="Toggle navigation"
+        >
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+          <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
+            <li class="nav-item">
+              <a class="nav-link active" aria-current="page" href="#">Home</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#">News</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#">Live Camera</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#">Photos</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#">Contact</a>
+            </li>          
+        </ul>
+        </div>
+      </div>
+    </nav>
+    
+    <section class="weather_section overflow-hidden">
+      <div class="input  m-auto mt-5 container-md">
+        <input type="text" id="search">
+        <button class="btn btn-primary" id="find">find</button>
+      </div>
+      <div class="container-md">
+        <div class="row my-5 gy-2 gx-0 groupe_card ">
+          <div class="col-lg-4 col-md-6">
+            <div class="item h-100">
+              <div class="header_item d-flex justify-content-between align-items-center p-2">
+                <h2 class="fs-6" id="dayNow"></h2>
+                <h2 class="fs-6" id="month"></h2>
+              </div>
+              <div class="body_item p-3  ">
+                <p class="fs-4 my-3" id="city"></p>
+                <div class="celucies d-flex justify-content-between align-items-center">
+                  <h1 class="text-white" id="temp"></h1>
+                  <img src="" alt="" id="icon_state">
+                </div>
+                <small class="text-primary" id="state"></small>
+                <div class="groupe_weather d-flex justify-content-between align-items-center w-75 my-3">
+                  <div>
+                    <img src="./image/icon-umberella.png" alt="">
+                    <small id="cloud_per"></small>
+                  </div>
+                  <div>
+                    <img src="./image/icon-wind.png" alt="">
+                    <small id="speed_wind"></small>
+                  </div>
+                  <div>
+                    <img src="./image/icon-compass.png"  >
+                    <small id="dir_wind"></small>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="col-lg-4 col-md-6">
+            <div class="item h-100">
+              <div class="header_item d-flex justify-content-center align-items-center p-2 bg_header_item">
+                <h2 class="fs-6" id="day2"></h2>
+              </div>
+              <div class="body_item body_second bg_body_item p-3">
+                <div class="celucies my-2 d-flex justify-content-center align-items-center">
+                  <img src="./image/sunny.png" alt="" id="icon_day2">
+                </div>
+                <div class="group text-center my-5">
+                  <h3 class="text-white" id="mx_day2"></h3>
+                  <small class="fs-5" id="min_day2"></small>
+                </div>
+                <small class="text-primary my-5 d-flex justify-content-center align-items-center" id="state_day2">sunny</small>
+              </div>
+            </div>
+          </div>
+          <div class="col-lg-4 col-md-6">
+            <div class="item h-100">
+              <div class="header_item d-flex justify-content-center align-items-center p-2 ">
+                <h2 class="fs-6" id="day3"></h2>
+              </div>
+              <div class="body_item body_second  p-3">
+                <div class="celucies my-2 d-flex justify-content-center align-items-center">
+                  <img src="./image/sunny.png" id="icon_day3">
+                </div>
+                <div class="group text-center my-5">
+                  <h3 class="text-white" id="mx_day3"></h3>
+                  <small class="fs-5"  id="min_day3"></small>
+                </div>
+                <small class="text-primary my-5 d-flex justify-content-center align-items-center" id="state_day3"></small>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    
+    <footer class="p-5">
+      <div class="container-md overflow-hidden">
+            <div class="row ">
+              <div class="col-md-8">
+                <div class="footer_cont">
+                  <div class="input  mt-5">
+                    <input type="text">
+                    <button class="btn btn-primary">Subscribe</button>
+                  </div>
+                  <p class="text-white mt-4">Copyright 2014 Company name. Designed by Themezy. All rights reserved</p>
+                </div>
+              </div>
+              <div class="col-md-4">
+                <div class="social_icon text-white d-flex justify-content-between align-items-center ms-lg-auto">
+                  <div>
+                    <i class="fa-brands fa-facebook-f"></i>
+                  </div>
+                  <div>
+                    <i class="fa-brands fa-twitter"></i>
+                  </div>
+                  <div>
+                    <i class="fa-brands fa-google-plus-g"></i>
+                  </div>
+                  <div>
+                    <i class="fa-brands fa-pinterest-p"></i>
+                  </div>
+                </div>
+              </div>
+            </div>
+      </div>
+    </footer> 
+    <script src="./js/main.js"></script>
+  </body>
+</html>
