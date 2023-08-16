@@ -35,13 +35,13 @@ find.addEventListener('click',function(){
     getWeatherData(search.value);
 })
 async function getWeatherData(q){
-    let myHttp=await fetch(`http://api.weatherapi.com/v1/forecast.json?key=73d5b9de236643f5b1b63008230708&q=${q}&days=3&aqi=no&alerts=no`)
+    let myHttp=await fetch(`https://api.weatherapi.com/v1/forecast.json?key=73d5b9de236643f5b1b63008230708&q=${q}&days=3&aqi=no&alerts=no`)
     let result= await myHttp.json();
-    // console.log(result);
+    console.log(result);
     temp.innerHTML=result.current.temp_c + `<sup>o</sup>C`;
     iconState.src=result.current.condition.icon;
     state.innerHTML=result.current.condition.text;
-    city.innerHTML=result.location.name;
+    city.innerHTML=result.location.country + ' - '+ result.location.region + ' - ' + result.location.name;
     speedWind.innerHTML=result.current.wind_kph+`km/h`;
     cloudPer.innerHTML=result.current.cloud +`%`;
     DirectWind.innerHTML=result.current.wind_dir;
